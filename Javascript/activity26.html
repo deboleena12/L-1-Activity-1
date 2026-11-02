@@ -60,28 +60,35 @@
 
     </div>
     <script>
-       var songs = ["Zoom", "Bounce", "Glow", "Rush", "Spark"];   //TOPIC 1 & 2
-       var plays = [320, 85, 210, 50, 175];                        //TOPIC 3
-       
-       document.getElementById("nameresult").innerHTML  = "Songs: " + songs;
-       document.getElementById("countresult").innerHTML  = "Plays: " + plays;
-       document.getElementById("labelresult").innerHTML  = "Press the button above!";
+        var songs = ["Zoom", "Bounce", "Glow", "Rush", "Spark"];   //TOPIC 1 & 2
+        var plays = [320, 85, 210, 50, 175];                        //TOPIC 3
 
-       function sortAZ()  
-       { songs.sort();
-        document.getElementById("nameResult").innerHTML = "A to Z: " + songs;
-       }
+        document.getElementById("nameresult").innerHTML = "Songs: " + songs;
+        document.getElementById("countresult").innerHTML = "Plays: " + plays;
+        document.getElementById("labelresult").innerHTML = "Press the button above!";
 
-       function sortZA() {
+        function sortAZ() {
+            songs.sort();
+            document.getElementById("nameResult").innerHTML = "A to Z: " + songs;
+        }
+
+        function sortZA() {
             songs.sort(); songs.reverse();
             document.getElementById("nameResult").innerHTML = "Z to A: " + songs;
         }
 
         function sortLeast() {
-                
-         plays.sort(function(a,b){return a-b;})
-                document.getElementById("nameResult").innerHTML = "A to Z: " + songs;
-            }
+
+            plays.sort(function (a, b) { return a - b; })
+            document.getElementById("nameResult").innerHTML = "A to Z: " + songs;
+        }
+
+        function sortLeast() { plays.sort(function (a, b) { return a - b; }); document.getElementById("countResult").innerHTML = "Least played first: " + plays; }
+        function sortMost() { plays.sort(function (a, b) { return b - a; }); document.getElementById("countResult").innerHTML = "Most played first: " + plays; }
+        function addLabel() { var l = plays.map(function (c) { return c + " plays"; }); document.getElementById("labelResult").innerHTML = "Labelled: " + l; }
+    </script>
+
+
     </script>
 </body>
 
