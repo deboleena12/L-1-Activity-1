@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button {
+            -align: center;
+            padding: 10px 20px;
+            background-color: lightgray;
+            border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
+    <h1>Color Changing Background</h1>
     <button onclick="changeColor()">Click me!</button>
     <script>
     function changeColor() {
-    document.body.style.backgroundColor = "red";
+    document.body.style.backgroundColor = "yellow";
     }
     </script>
 </body>
