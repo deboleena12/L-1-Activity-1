@@ -1,0 +1,10 @@
+body {
+    font-family: cursive;
+    text-align: center;
+    padding: 20px;
+    background-color: lavender;
+    color: darkviolet;
+}
+.MyClockDisplay {
+    background-color: white;
+}
