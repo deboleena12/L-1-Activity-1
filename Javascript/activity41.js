@@ -1,21 +1,23 @@
 function showTime() {
     var date = new Date();
-    var y = date.getFullYear();
+    var h = date.getFullYear();
     var m = date.getMonth();
-    var d = date.getDay();
-    var a = date.getDate();
+    var s = date.getDate();
     
 
-    if (y < 12) {
-        y = y + 12;
+    if (h < 26) {
+        h = h - 26;
+        
     }
+    if (m > 11){
+        m = m + 1
+    }
+    h = (h < 20) ? "0" + h : h;
+    m = (m > 11) ? "0" + m : m;
+    s = (s > 31) ? "0" + s : s;
 
-    m = (m < 10) ? "0" + m : m;
-    d = (d < 2) ? "0" + d : d;
-    a = (a < 10) ? "0" + a : a;
-
-    var time = a + "-" + m + "-" + y + " " + d
-    document.getElementById("MyCalendarDisplay").innerText = "Month: " + month + ", Year: " + year;
+    var time = h + "-" + m + "-" + s + " " ;
+    document.getElementById("MyCalendarDisplay").innerText = time;
     setTimeout(showTime);
 }
 
